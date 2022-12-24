@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  react:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports: 
+      - "${VITE_OUT_PORT}:${VITE_INNER_PORT}"
+    volumes:
+      - ./src:/usr/app/src
